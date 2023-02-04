@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriceScrapper.Api", "PriceScrapper\Api\PriceScrapper.Api.csproj", "{4D13C10B-E90C-499E-8922-7922CBA08187}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PriceScrapper", "PriceScrapper", "{D820D6DA-9D3E-4AA6-8C1C-7B672AE0E275}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceScrapper.Domain", "PriceScrapper\Domain\PriceScrapper.Domain\PriceScrapper.Domain.csproj", "{EB68E9C9-1F62-49D2-9908-D371D114E1F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceScrapper.Infrastructure", "PriceScrapper\Infrastructure\PriceScrapper.Infrastructure\PriceScrapper.Infrastructure.csproj", "{8175E981-A494-4C5F-8EAD-CB3224E90690}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceScrapper.Application", "PriceScrapper\Application\PriceScrapper.Application\PriceScrapper.Application.csproj", "{717F2E35-CC63-46D6-B62E-3F79BB0647F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D13C10B-E90C-499E-8922-7922CBA08187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D13C10B-E90C-499E-8922-7922CBA08187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D13C10B-E90C-499E-8922-7922CBA08187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D13C10B-E90C-499E-8922-7922CBA08187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB68E9C9-1F62-49D2-9908-D371D114E1F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB68E9C9-1F62-49D2-9908-D371D114E1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB68E9C9-1F62-49D2-9908-D371D114E1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB68E9C9-1F62-49D2-9908-D371D114E1F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8175E981-A494-4C5F-8EAD-CB3224E90690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8175E981-A494-4C5F-8EAD-CB3224E90690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8175E981-A494-4C5F-8EAD-CB3224E90690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8175E981-A494-4C5F-8EAD-CB3224E90690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717F2E35-CC63-46D6-B62E-3F79BB0647F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717F2E35-CC63-46D6-B62E-3F79BB0647F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717F2E35-CC63-46D6-B62E-3F79BB0647F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717F2E35-CC63-46D6-B62E-3F79BB0647F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D13C10B-E90C-499E-8922-7922CBA08187} = {D820D6DA-9D3E-4AA6-8C1C-7B672AE0E275}
+		{EB68E9C9-1F62-49D2-9908-D371D114E1F6} = {D820D6DA-9D3E-4AA6-8C1C-7B672AE0E275}
+		{8175E981-A494-4C5F-8EAD-CB3224E90690} = {D820D6DA-9D3E-4AA6-8C1C-7B672AE0E275}
+		{717F2E35-CC63-46D6-B62E-3F79BB0647F4} = {D820D6DA-9D3E-4AA6-8C1C-7B672AE0E275}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E69F8401-1068-4231-8289-42FC4C83C032}
+	EndGlobalSection
+EndGlobal
