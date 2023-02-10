@@ -1,15 +1,25 @@
+using Microsoft.EntityFrameworkCore;
+using PriceScrapper.Application;
+using PriceScrapper.Application.Common.Interfaces;
+using PriceScrapper.Infrastructure.Persistence;
+using PriceScrapper.Infrastructure.Scrapper;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddTransient<IScrapper, Scrapper>();
+
+builder.Services.AddApplication();
+
+builder.Services.AddDbContext<AppDbContext>(opt => 
+    opt.UseInMemoryDatabase("DbMem"));
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
