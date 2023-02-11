@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -11,6 +12,7 @@ public static class Startup
         var assemblies = Assembly.GetExecutingAssembly();
 
         return services
-            .AddMediatR(assemblies);
+            .AddMediatR(assemblies)
+            .AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
     }
 }

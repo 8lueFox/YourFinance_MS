@@ -1,17 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using PriceScrapper.Application;
 using PriceScrapper.Application.Common.Interfaces;
+using PriceScrapper.Infrastructure;
 using PriceScrapper.Infrastructure.Persistence;
 using PriceScrapper.Infrastructure.Scrapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddTransient<IScrapper, Scrapper>();
-
 builder.Services.AddApplication();
-
-builder.Services.AddDbContext<AppDbContext>(opt => 
-    opt.UseInMemoryDatabase("DbMem"));
+builder.Services.AddInfrastructure();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

@@ -32,4 +32,6 @@ public class Stock : BaseEntity
     public string? Sector { get; set; }
 
     public string? Url { get; set; }
+
+    public DateTime FetchData { get; set; } = DateTime.UtcNow;
 }
