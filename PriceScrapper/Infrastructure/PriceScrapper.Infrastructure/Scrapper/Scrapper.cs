@@ -8,19 +8,16 @@ namespace PriceScrapper.Infrastructure.Scrapper;
 
 public class Scrapper : IScrapper
 {
-    private readonly IRepository<Stock> _repo;
     private readonly IScrapperSaver _saver;
 
-    public Scrapper(
-        IRepository<Stock> repo, 
+    public Scrapper( 
         IScrapperSaver saver)
     {
-        _repo = repo;
         _saver = saver;
     }
 
     //https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=25&offset=0&download=true
-    public async void FetchStocks(CancellationToken ct)
+    public async Task<bool> FetchStocks(CancellationToken ct)
     {
         try
         {
@@ -37,12 +34,13 @@ public class Scrapper : IScrapper
             if(response.IsSuccessStatusCode)
             {
                 data = JsonSerializer.Deserialize<Root>(response.Content!)!;
-                _saver.Save(data);
+                return await _saver.SaveAsync(data);
             }
         }
         catch (Exception ex)
         {
             Console.WriteLine("An error occurred while making the request: " + ex.Message);
         }
+        return true;
     }
 }

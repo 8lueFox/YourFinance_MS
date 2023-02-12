@@ -2,5 +2,5 @@
 
 public interface IScrapperSaver : ITransientService
 {
-    void Save(Root root);
+    Task<bool> SaveAsync(Root root);
 }

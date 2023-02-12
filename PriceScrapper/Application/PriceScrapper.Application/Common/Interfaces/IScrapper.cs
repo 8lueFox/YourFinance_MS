@@ -2,5 +2,5 @@
 
 public interface IScrapper : ITransientService
 {
-    void FetchStocks(CancellationToken ct);
+    Task<bool> FetchStocks(CancellationToken ct);
 }

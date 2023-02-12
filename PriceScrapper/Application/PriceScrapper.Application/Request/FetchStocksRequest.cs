@@ -15,19 +15,18 @@ public class FetchStocksRequestHandler : IRequestHandler<FetchStocksRequest, boo
         //_logger = logger;
     }
 
-    public Task<bool> Handle(FetchStocksRequest request, CancellationToken cancellationToken)
+    public async Task<bool> Handle(FetchStocksRequest request, CancellationToken cancellationToken)
     {
         //_logger.LogInformation("start fetching stocks");
         try
         {
-            _scrapper.FetchStocks(cancellationToken);
+            return await _scrapper.FetchStocks(cancellationToken);
         }
         catch (Exception ex)
         {
             //_logger.LogInformation($"error during stocks was fetching {ex.Message}");
-            return Task.FromResult(false);
+            return false;
         }
         //_logger.LogInformation("ended fetch stocks");
-        return Task.FromResult(true);
     }
 }

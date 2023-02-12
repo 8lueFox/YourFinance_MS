@@ -19,11 +19,13 @@ public class ScrapperSaver : IScrapperSaver
         _mapper = mapper;
     }
 
-    public async void Save(Root root)
+    public async Task<bool> SaveAsync(Root root)
     {
         var stocks = _mapper.Map<IEnumerable<Stock>>(root.data.rows);
 
         await _repo.AddRangeAsync(stocks);
         await _repo.SaveChangesAsync();
+
+        return true;
     }
 }
