@@ -2,7 +2,7 @@
 
 namespace PriceScrapper.Application.Request;
 
-public class StockCreateDto
+public class StockDto
 {
     [Required]
     public string Symbol { get; set; } = string.Empty;
@@ -14,5 +14,5 @@ public class StockCreateDto
 
     public decimal NetChange { get; set; }
 
-    public decimal Change { get; set; }
+    public decimal PctChange { get; set; }
 }

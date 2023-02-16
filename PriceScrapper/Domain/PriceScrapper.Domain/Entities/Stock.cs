@@ -17,7 +17,7 @@ public class Stock : BaseEntity
 
     public decimal? Change { get; set; }
 
-    public decimal? PCTChange { get; set; }
+    public decimal? PctChange { get; set; }
 
     public decimal? Volume { get; set; }
 

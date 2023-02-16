@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\YF.SharedKernel\YF.SharedKernel.csproj" />
     <ProjectReference Include="..\Infrastructure\PriceScrapper.Infrastructure\PriceScrapper.Infrastructure.csproj" />
   </ItemGroup>
 
